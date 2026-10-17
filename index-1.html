@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Personal portfolio of Jyotishman Kachari, a student at St. Claret School, Borjhar, Guwahati.">
+  <title>Competitor of Neelav Mahanta | Jyotishman Kachari</title>
+  <style>
+    :root{--bg:#07111f;--panel:#0d1b30;--text:#f4f7fb;--muted:#b6c4d8;--blue:#2587ff;--cyan:#3bd4ff;--line:#203650}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-size:1.05rem;font-weight:800;text-decoration:none;letter-spacing:-.03em}
+    .brand span,.accent{color:var(--cyan)}
+    .navlinks{display:flex;gap:22px;align-items:center}
+    .navlinks a{text-decoration:none;color:var(--muted);font-size:.94rem}
+    .navlinks a:hover{color:white}
+    .menu{display:none;background:none;color:white;border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-size:1rem}
+    .hero{padding:82px 0 74px;background:radial-gradient(ellipse at 80% 30%,#103b70 0,transparent 43%),linear-gradient(125deg,#07111f,#0a1c33)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:44px}
+    .eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.22em;font-size:.82rem}
+    h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.05;letter-spacing:-.055em;margin:15px 0}
+    .gradient{background:linear-gradient(90deg,#54c9ff,#3982ff);color:transparent;background-clip:text;-webkit-background-clip:text}
+    .subtitle{font-size:1.1rem;color:#d6e3f5}
+    .intro{max-width:600px;color:var(--muted)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:999px;padding:12px 19px;border:1px solid #42617f}
+    .btn.primary{background:var(--blue);border-color:var(--blue);color:white}
+    .hero-card{min-height:310px;border:1px solid #24496e;border-radius:26px;background:linear-gradient(145deg,#102b4a,#0b1728);padding:28px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 25px 70px #0004}
+    .orb{width:95px;height:95px;border-radius:50%;display:grid;place-items:center;font-size:2.4rem;font-weight:900;background:linear-gradient(135deg,#49d6ff,#246bff);color:#061225;box-shadow:0 0 45px #2587ff55}
+    .hero-card h2{font-size:1.6rem;margin:20px 0 4px}
+    .hero-card p{color:var(--muted);margin:0}
+    section{padding:66px 0}
+    .section-title{font-size:2rem;letter-spacing:-.035em;margin:0 0 8px}
+    .underline{width:48px;height:4px;background:var(--cyan);border-radius:4px;margin:0 0 28px}
+    .about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:28px;align-items:stretch}
+    .panel,.skill,.project{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:24px}
+    .about-mark{font-size:3.4rem;font-weight:900;color:var(--cyan);letter-spacing:-.08em}
+    .muted{color:var(--muted)}
+    .facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .chip{border:1px solid #2a4969;border-radius:999px;padding:7px 12px;color:#d5e8ff;font-size:.88rem}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .skill .icon{font-size:1.7rem;color:var(--cyan)}
+    .skill h3{margin:8px 0 4px}
+    .skill p{margin:0;color:var(--muted);font-size:.95rem}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project h3{margin:0 0 8px}
+    .project p{margin:0;color:var(--muted)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .contact-link{display:block;text-decoration:none;overflow-wrap:anywhere}
+    footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.9rem}
+    footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:760px){
+      .menu{display:block}.navlinks{display:none;position:absolute;top:69px;left:0;right:0;padding:18px 4%;background:#07111f;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}
+      .navlinks.open{display:flex}.hero{padding:55px 0}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-card{min-height:250px}
+      .skills,.projects{grid-template-columns:1fr}.section-title{font-size:1.7rem}section{padding:48px 0}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">Competitor <span>of</span> Neelav Mahanta</a>
+      <button class="menu" id="menuButton" aria-expanded="false" aria-controls="navlinks">Menu ☰</button>
+      <div class="navlinks" id="navlinks">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Interests</a><a href="#projects">Goals</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">HELLO, WORLD!</div>
+          <h1>I'm <span class="gradient">Jyotishman Kachari</span></h1>
+          <div class="subtitle">Student · Curious Learner · Future Innovator</div>
+          <p class="intro">Welcome to my personal website. I'm building my skills, exploring technology, and working toward exciting goals one step at a time.</p>
+          <div class="actions">
+            <a class="btn primary" href="#about">About Me ↓</a>
+            <a class="btn" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Personal introduction">
+          <div class="orb" aria-hidden="true">JK</div>
+          <div>
+            <h2>Learn. Create. Grow.</h2>
+            <p>Every big achievement begins with a small step.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2 class="section-title">About Me</h2><div class="underline"></div>
+        <div class="about-grid">
+          <div class="panel">
+            <div class="about-mark">JK.</div>
+            <h3>Jyotishman Kachari</h3>
+            <p class="muted">Student at St. Claret School, Borjhar, Guwahati</p>
+          </div>
+          <div class="panel">
+            <h3>A little about me</h3>
+            <p class="muted">My name is Jyotishman Kachari, and I study at St. Claret School in Borjhar, Guwahati. I enjoy learning new things and want to keep developing my knowledge and abilities. This website is my online space to share my interests, goals, and future projects.</p>
+            <div class="facts">
+              <span class="chip">📍 Guwahati, Assam</span>
+              <span class="chip">🎓 Student</span>
+              <span class="chip">🚀 Future-focused</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <h2 class="section-title">My Interests</h2><div class="underline"></div>
+        <div class="skills">
+          <article class="skill"><div class="icon">⌘</div><h3>Technology</h3><p>Exploring digital tools and how technology can solve everyday problems.</p></article>
+          <article class="skill"><div class="icon">✦</div><h3>Creativity</h3><p>Coming up with ideas and finding new ways to express them.</p></article>
+          <article class="skill"><div class="icon">↗</div><h3>Learning & Growth</h3><p>Building knowledge, staying curious, and improving step by step.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <h2 class="section-title">My Goals</h2><div class="underline"></div>
+        <div class="projects">
+          <article class="project"><h3>Build New Skills</h3><p>Keep learning and strengthen my abilities for the future.</p></article>
+          <article class="project"><h3>Create Projects</h3><p>Turn ideas into useful projects as I gain experience.</p></article>
+          <article class="project"><h3>Make an Impact</h3><p>Use what I learn to contribute positively to my community.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2 class="section-title">Contact Me</h2><div class="underline"></div>
+        <div class="contact-grid">
+          <div class="panel"><h3>Let's connect</h3><p class="muted">Want to get in touch? You can contact me by phone.</p></div>
+          <div class="panel"><p class="muted">Phone</p><a class="contact-link" href="tel:7896577993">7896577993</a><p class="muted">Please be respectful when contacting me.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span>© <span id="year"></span> Jyotishman Kachari</span><span>Made with curiosity and ambition.</span></div></footer>
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const navlinks = document.getElementById('navlinks');
+    menuButton.addEventListener('click', () => {
+      const open = navlinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(open));
+    });
+    navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navlinks.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
